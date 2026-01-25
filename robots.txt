@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dramawave.github.io/news/sitemap.xml
