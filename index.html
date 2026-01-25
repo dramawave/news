@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<title>DramaWave</title>
+
+<!-- SEO -->
+<meta name="description" content="The ultimate streaming platform for drama series. Watch exclusive HD dramas anytime, anywhere.">
+<meta name="keywords" content="drama series, streaming drama, drama app, nonton drama">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="DramaWave – Ultimate Drama Streaming">
+<meta property="og:description" content="Watch exclusive drama series in HD. Download now.">
+<meta property="og:image" content="https://static-v1.mydramawave.com/frontend_static/Logo.png">
+<meta property="og:url" content="/">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="https://static-v1.mydramawave.com/frontend_static/dramawave.ico">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg1:#0b0b16;
+  --bg2:#2a0b1f;
+  --accent:#ff3d81;
+  --text:#ffffff;
+  --muted:#b5b5c5;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:Inter,system-ui;
+  background:radial-gradient(circle at top right,var(--bg2),var(--bg1));
+  color:var(--text);
+  min-height:100vh;
+}
+
+/* ===== HEADER ===== */
+.header{
+  position:absolute;
+  top:30px;
+  left:40px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  z-index:10;
+}
+.header img{
+  width:34px;
+}
+.header span{
+  font-weight:600;
+  font-size:20px;
+}
+
+/* ===== HERO ===== */
+.hero{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  min-height:100vh;
+  padding:120px 60px 60px;
+}
+
+/* LEFT */
+.hero-left h1{
+  font-family:"Playfair Display",serif;
+  font-size:56px;
+  line-height:1.15;
+  max-width:520px;
+}
+.hero-left p{
+  margin-top:20px;
+  color:var(--muted);
+  max-width:460px;
+}
+.store-buttons{
+  display:flex;
+  gap:16px;
+  margin-top:40px;
+}
+.store-buttons img{
+  height:54px;
+  cursor:pointer;
+}
+
+/* RIGHT GRID */
+.hero-right{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.poster{
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+.poster img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+.poster:hover img{
+  transform:scale(1.05);
+}
+
+/* FOOTER */
+.footer{
+  position:absolute;
+  bottom:20px;
+  left:40px;
+  font-size:13px;
+  color:#9ca3af;
+}
+.footer a{
+  color:#9ca3af;
+  text-decoration:none;
+  margin-right:14px;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+    padding:110px 24px 40px;
+  }
+  .hero-right{
+    margin-top:50px;
+    grid-template-columns:repeat(3,1fr);
+  }
+  .hero-left h1{
+    font-size:40px;
+  }
+}
+</style>
+
+<!-- Performance -->
+<script>
+window.startReportTime = Date.now();
+</script>
+
+<meta name="color-scheme" content="dark only">
+
+</head>
+<body>
+
+<!-- LOGO -->
+<div class="header">
+  <img src="https://static-v1.mydramawave.com/frontend_static/Logo.png" alt="DramaWave">
+  <span>DramaWave</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- LEFT -->
+  <div class="hero-left">
+    <h1>The ultimate streaming platform for drama series.</h1>
+    <p>
+      Discover exclusive drama series, vertical movies, and cinematic stories
+      you can’t find anywhere else.
+    </p>
+
+    <div class="store-buttons">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="hero-right">
+    <!-- Ganti gambar sesuai kebutuhan -->
+    <div class="poster"><img src="https://picsum.photos/400/600?1"></div>
+    <div class="poster"><img src="https://picsum.photos/400/600?2"></div>
+    <div class="poster"><img src="https://picsum.photos/400/600?3"></div>
+    <div class="poster"><img src="https://picsum.photos/400/600?4"></div>
+    <div class="poster"><img src="https://picsum.photos/400/600?5"></div>
+    <div class="poster"><img src="https://picsum.photos/400/600?6"></div>
+    <div class="poster"><img src="https://picsum.photos/400/600?7"></div>
+    <div class="poster"><img src="https://picsum.photos/400/600?8"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <a href="#">Terms of Use</a>
+  <a href="#">Privacy Policy</a>
+  <span>Contact: support@dramawave.com</span>
+</div>
+
+</body>
+</html>
