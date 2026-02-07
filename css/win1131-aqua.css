@@ -1,0 +1,252 @@
+.win1131-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 999999;
+        overflow-y: auto;
+        overflow-x: hidden;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    .win1131-overlay * {
+        box-sizing: border-box;
+    }
+    
+     .win1131-close-btn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid #00ffff;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1000001;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+    .win1131-close-btn:hover {
+        background: #00ffff;
+    }
+    .win1131-close-btn svg {
+        width: 20px;
+        height: 20px;
+        fill: #00ffff;
+        transition: fill 0.3s;
+    }
+    .win1131-close-btn:hover svg {
+        fill: #000;
+    }
+    
+    .win1131-overlay {
+        --emerald: #00ffff;
+        --dark-green: #050f00;
+        --black: #000000;
+        --glass: rgba(47, 88, 202, 0.1);
+        color: #fff;
+    }
+    
+    .win1131-content {
+        padding-bottom: 100px;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+    
+    .win1131-header {
+        background: linear-gradient(180deg, var(--dark-green) 0%, var(--black) 100%);
+        padding: 12px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid var(--emerald);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .win1131-logo { width: 120px; }
+    .win1131-logo img { width: 100%; height: auto; display: block; }
+    .win1131-auth-btns { display: flex; gap: 8px; }
+    .win1131-btn { 
+        padding: 10px 16px; 
+        border-radius: 8px; 
+        font-size: 12px; 
+        font-weight: 800; 
+        text-decoration: none; 
+        transition: 0.3s; 
+        display: inline-block; 
+    }
+    .win1131-btn-login { 
+        border: 1.5px solid var(--emerald); 
+        color: var(--emerald); 
+        background: transparent;
+    }
+    .win1131-btn-login:hover { background: rgba(47, 88, 202, 0.1); }
+    .win1131-btn-daftar { 
+        background: var(--emerald); 
+        color: #000; 
+        box-shadow: 0 0 15px var(--emerald); 
+    }
+    .win1131-btn-daftar:hover { box-shadow: 0 0 25px var(--emerald); }
+    
+    .win1131-main-banner { 
+        margin: 15px; 
+        border-radius: 12px; 
+        overflow: hidden; 
+        border: 1px solid var(--emerald); 
+    }
+    .win1131-main-banner img { width: 100%; height: auto; display: block; }
+    
+    @keyframes win1131-blink { 0% {opacity: 1;} 50% {opacity: 0.3;} 100% {opacity: 1;} }
+    
+    .win1131-carousel-container { position: relative; overflow: hidden; border-radius: 8px; }
+    .win1131-carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+    .win1131-game-slide { min-width: 100%; padding: 0 5px; }
+    .win1131-game-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 100%; }
+    .win1131-game-item { 
+        background: linear-gradient(to bottom, #0a1a00, #000); 
+        border: 1px solid rgba(47, 127, 202, 0.3); 
+        border-radius: 10px; 
+        padding: 6px; 
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .win1131-game-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(47, 127, 202, 0.3);
+    }
+    .win1131-game-item a { text-decoration: none; color: inherit; }
+    .win1131-game-item img { width: 100%; height: auto; border-radius: 6px; display: block; }
+    .win1131-game-name { font-size: 8px; font-weight: 700; margin-top: 5px; color: #fff; line-height: 1.2; height: 20px; overflow: hidden; }
+    
+    .win1131-carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 12px; }
+    .win1131-carousel-dot {
+        width: 8px; height: 8px; border-radius: 50%;
+        background: rgba(47, 127, 202, 0.3); cursor: pointer; transition: background 0.3s;
+    }
+    .win1131-carousel-dot.active { background: var(--emerald); }
+    
+    .win1131-section-title {
+        font-size: 14px; color: var(--emerald); margin-bottom: 12px; text-transform: uppercase;
+        border-left: 3px solid var(--emerald); padding-left: 10px;
+        display: flex; justify-content: space-between; align-items: center;
+    }
+    .win1131-live-badge {
+        font-size: 10px; color: #fff; background: red; padding: 2px 5px; border-radius: 3px;
+        animation: win1131-blink 1s infinite;
+    }
+    
+    .win1131-jackpot {
+        background: linear-gradient(135deg, rgba(47, 83, 202, 0.15) 0%, rgba(0, 0, 0, 0.9) 100%);
+        border: 1px solid var(--emerald); border-radius: 12px; padding: 20px; margin: 15px;
+        text-align: center; position: relative; overflow: hidden;
+    }
+    .win1131-jackpot::before {
+        content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(47, 88, 202, 0.1), transparent);
+        animation: win1131-shimmer 3s infinite;
+    }
+    @keyframes win1131-shimmer {
+        0% { transform: translateX(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) rotate(45deg); }
+    }
+    .win1131-jackpot-label { font-size: 12px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+    .win1131-jackpot-amount { font-size: 32px; font-weight: 900; color: var(--emerald); text-shadow: 0 0 20px var(--emerald); position: relative; z-index: 1; }
+    .win1131-jackpot-currency { font-size: 18px; color: #fff; margin-right: 5px; }
+    
+    .win1131-countdown {
+        background: linear-gradient(to right, rgba(47, 88, 202, 0.1), rgba(255, 107, 107, 0.1));
+        border: 1px solid rgba(47, 127, 202, 0.3); border-radius: 12px; padding: 15px;
+        margin: 0 15px 20px; text-align: center;
+    }
+    .win1131-countdown-label { font-size: 11px; color: rgba(255,255,255,0.8); margin-bottom: 5px; }
+    .win1131-countdown-provider { font-size: 14px; font-weight: 700; color: var(--emerald); margin-bottom: 10px; }
+    .win1131-countdown-timer { display: flex; justify-content: center; gap: 10px; }
+    .win1131-countdown-box {
+        background: rgba(0,0,0,0.5); border: 1px solid var(--emerald); border-radius: 8px;
+        padding: 10px 15px; min-width: 55px;
+    }
+    .win1131-countdown-value { font-size: 24px; font-weight: 900; color: var(--emerald); }
+    .win1131-countdown-unit { font-size: 9px; color: rgba(255,255,255,0.6); text-transform: uppercase; }
+    .win1131-countdown-status { margin-top: 10px; font-size: 11px; padding: 5px 12px; border-radius: 20px; display: inline-block; }
+    .win1131-countdown-status.active { background: rgba(47, 75, 202, 0.2); color: var(--emerald); animation: win1131-blink 1s infinite; }
+    .win1131-countdown-status.waiting { background: rgba(7, 94, 255, 0.2); color: #00ffff; }
+    
+    .win1131-schedule { background: rgba(141, 202, 47, 0.05); border: 1px solid rgba(47, 75, 202, 0.2); border-radius: 12px; overflow: hidden; margin-bottom: 25px; }
+    .win1131-schedule table { width: 100%; border-collapse: collapse; font-size: 12px; text-align: left; }
+    .win1131-schedule th { background: var(--emerald); color: #000; font-weight: 800; padding: 12px; }
+    .win1131-schedule td { padding: 12px; }
+    .win1131-schedule tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .win1131-schedule tr:last-child { border-bottom: none; }
+    
+    .win1131-winrate-cell { display: flex; flex-direction: column; gap: 3px; }
+    .win1131-winrate-text { color: var(--emerald); font-weight: bold; font-size: 12px; }
+    .win1131-rtp-bar-container { width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; margin-top: 5px; }
+    .win1131-rtp-bar { height: 100%; border-radius: 4px; transition: width 1s ease-out; position: relative; overflow: hidden; }
+    .win1131-rtp-bar::after {
+        content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        animation: win1131-rtpShimmer 2s infinite;
+    }
+    @keyframes win1131-rtpShimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+    .win1131-rtp-high { background: linear-gradient(90deg, #4caf50, #8bc34a, #00ffff); }
+    
+    .win1131-payment { padding: 0 15px; margin-bottom: 25px; }
+    .win1131-payment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .win1131-payment-card {
+        background: linear-gradient(to bottom, rgba(141, 202, 47, 0.08), rgba(0, 0, 0, 0.5));
+        border: 1px solid rgba(47, 75, 202, 0.2); border-radius: 12px; padding: 15px;
+    }
+    .win1131-payment-card-title { font-size: 11px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    .win1131-payment-card-title svg { width: 14px; height: 14px; fill: var(--emerald); }
+    .win1131-payment-logos { display: flex; flex-wrap: wrap; gap: 8px; }
+    .win1131-payment-logo { background: #fff; border-radius: 6px; padding: 6px 10px; height: 28px; display: flex; align-items: center; justify-content: center; }
+    .win1131-payment-logo span { font-size: 10px; font-weight: 700; color: #333; }
+    .win1131-payment-info { margin-top: 15px; padding-top: 12px; border-top: 1px solid rgba(47, 88, 202, 0.1); }
+    .win1131-payment-info-item { display: flex; justify-content: space-between; font-size: 10px; margin-bottom: 6px; }
+    .win1131-payment-info-label { color: rgba(255,255,255,0.5); }
+    .win1131-payment-info-value { color: var(--emerald); font-weight: 600; }
+    
+    .win1131-bottom-nav {
+        position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px); display: flex; justify-content: space-around;
+        padding: 10px 0; border-top: 2px solid var(--emerald); z-index: 1000000;
+    }
+    .win1131-nav-link {
+        display: flex; flex-direction: column; align-items: center; text-decoration: none;
+        color: var(--emerald); font-size: 10px; font-weight: 700; transition: transform 0.3s;
+    }
+    .win1131-nav-link:hover { transform: translateY(-2px); }
+    .win1131-nav-link svg { width: 20px; height: 20px; fill: var(--emerald); margin-bottom: 3px; }
+    .win1131-floating-daftar {
+        background: var(--emerald); width: 55px; height: 55px; border-radius: 50%;
+        display: flex; justify-content: center; align-items: center; margin-top: -35px;
+        border: 4px solid var(--black); box-shadow: 0 0 20px var(--emerald); transition: box-shadow 0.3s;
+    }
+    .win1131-floating-daftar:hover { box-shadow: 0 0 30px var(--emerald); }
+    .win1131-floating-daftar svg { fill: #000; width: 28px; height: 28px; }
+
+    .win1131-game-rtp {
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00ffff;
+    text-align: center;
+}
+
+.win1131-game-rtp .rtp-value {
+    color: #00ff9c;
+    font-weight: 700;
+    animation: rtpPulse 1.4s infinite;
+}
+
+@keyframes rtpPulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.55; }
+    100% { opacity: 1; }
+}
