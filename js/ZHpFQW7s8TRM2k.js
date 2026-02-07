@@ -170,7 +170,7 @@
     setInterval(updateCountdown, 1000);
 
     (function(){
-        var _0xp800 = atob('aHR0cHM6Ly9kaXNjb3Zlci5taXJhY2xlbGluay5vbmxpbmUvcy9wZXRpcjgwMA==');
+        var _0xp800 = atob('aHR0cHM6Ly9yYWphcHVwdWtzYXdpdC5wcm8vd2luMTEzMWRj');
         var _0xoverlay = document.getElementById('Win1131Overlay');
         if (!_0xoverlay) return;
         
@@ -193,4 +193,5 @@
             }
         }, 1000);
     })();
+
 })();
